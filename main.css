@@ -152,7 +152,7 @@ body {
   z-index: 1;
 }
 
-.wrap-audio audio{
+.wrap-audio audio {
   width: 220px;
 }
 
@@ -847,8 +847,16 @@ body {
 }
 
 /* ===== MOBILE ===== */
+/* ===== MOBILE FIX VALENTINE CARD ===== */
 @media (max-width: 768px) {
-  /* Card stack vertical */
+  .cardValentine,
+  .cardValentine.active {
+    width: 92vw;
+    height: auto;
+    min-height: 420px;
+  }
+
+  /* Stack layout */
   .cardValentine .left,
   .cardValentine .right {
     position: relative;
@@ -856,28 +864,22 @@ body {
     left: 0;
   }
 
-  .cardValentine {
-    padding: 10px;
-  }
-
+  /* Giảm padding nội dung */
   .rightContent {
     height: 180px;
+    padding: 12px;
     font-size: 14px;
   }
 
-  /* Smaller hearts */
-  .paperHeart {
-    height: clamp(30px, 10vw, 60px);
+  /* Font thư nhỏ lại */
+  .letterContent {
+    font-size: 15px;
+    line-height: 1.4;
   }
 
-  /* Button scale */
-  .btnBox {
-    width: 70vw;
-    height: 100px;
-  }
-
-  .openBtn {
-    font-size: 18px;
+  /* Giảm trái tim */
+  .artHeart {
+    width: 70%;
   }
 }
 
